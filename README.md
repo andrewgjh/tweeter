@@ -8,9 +8,10 @@ The project was created by Andrew Ho.  Technologies used during the creation inc
 - AJAX 
 - Express
 - JS
+
 ## Screenshots
-!['Desktop View'](https://github.com/andrewgjh/tweeter/blob/master/docs/urlList.png)
-!['Mobile/Tablet View'](https://github.com/andrewgjh/tweeter/blob/master/docs/tinyURL.png)
+!['Desktop View'](https://github.com/andrewgjh/tweeter/blob/master/public/images/desktopView.png)
+!['Mobile/Tablet View'](https://github.com/andrewgjh/tweeter/blob/master/public/images/mobile:tabletView.png)
 
 
 ## Learning Outcome
