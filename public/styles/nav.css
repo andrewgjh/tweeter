@@ -1,0 +1,50 @@
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #DD4A48;
+  color: #FDFCE5;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  position:fixed;
+  top: 0;
+  width: 100%;
+}
+
+.logo{
+  font-family: 'Bungee Shade', sans-serif;
+  font-size: 35px;
+  animation: tweet 1.5s ease 1;
+}
+
+.chevron {
+  color: rgb(255, 238, 173);
+  animation: bounce 1.5s ease 5;
+}
+.chevron:hover,
+.nav-btn:hover + i
+{
+  animation: bounce 1.5s ease infinite;
+}
+
+nav div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+  40% {transform: translateY(10px);} 
+  60% {transform: translateY(5px);} 
+} 
+
+@keyframes tweet {
+  40% { transform: scale(1.2); }
+  45%, 60% { transform: rotate(-20deg) scale(1.2); }
+  50% { transform: rotate(20deg) scale(1.2); }
+  70% { transform: rotate(0deg) scale(1.2); }
+  100% { transform: scale(1); }
+}

@@ -1,0 +1,74 @@
+.new-tweet {
+  display: none;
+  height: 8em;
+}
+
+textarea {
+  background: transparent;
+  border: 0 none;
+  border-bottom: 2px solid;
+  resize: none;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 35px;
+  font-size: 20px;
+}
+
+textarea:focus,
+textarea:hover {
+  outline: none;
+  border-bottom-color: rgba(92, 90, 85, 0.7);
+}
+
+textarea:focus+label {
+  display: none;
+}
+
+.tweet-info-submit {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
+
+.tweet-btn {
+  background-color: #DD4A48;
+  border: none;
+  border-radius: 4px;
+  color: #F5EEDC;
+  padding: 3px;
+}
+
+.new-tweet form {
+  position: relative;
+}
+
+.new-tweet label {
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  height: 35px;
+}
+
+.danger-text {
+  color: #DD4A48;
+}
+
+.deactivate-btn {
+  background-color: #5c5a55;
+}
+
+.deactivate-display {
+  display: none;
+}
+
+#tweet-error {
+  margin: auto;
+  width: 50%;
+  background: #FF9F45;
+  height: 28px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-bottom: -28px;
+  display: none;
+}
