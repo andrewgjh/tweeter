@@ -1,9 +1,9 @@
 nav {
-  height: 120px;
+  height: 4em;
   width: 100%;
   background-color: #DD4A48;
   color: #FDFCE5;
-  padding: 1.5em;
+  padding:1em;
   display: flex;
   justify-content: space-between;
   z-index: 1;
@@ -14,13 +14,23 @@ nav {
 
 .logo{
   font-family: 'Bungee Shade', sans-serif;
-  font-size: 35px;
+  font-size: 1.45em;
   animation: tweet 1.5s ease 1;
 }
+.logo:hover{
+  transform: translateY(-0.2rem);
+  transition: all .1s ease;
+}
+.logo:active{
+  transform: translateY(-0.1rem);
+  transition: all .1s ease;
+}
+
+
 
 .chevron {
   color: rgb(255, 238, 173);
-  animation: bounce 1.5s ease 5;
+  animation: bounce 1.5s ease 3;
 }
 .chevron:hover,
 .nav-btn:hover + i
@@ -28,11 +38,11 @@ nav {
   animation: bounce 1.5s ease infinite;
 }
 
-nav div {
+#toTweet {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 @keyframes bounce {
@@ -47,4 +57,11 @@ nav div {
   50% { transform: rotate(20deg) scale(1.2); }
   70% { transform: rotate(0deg) scale(1.2); }
   100% { transform: scale(1); }
+}
+
+@media all and (min-width: 1024px) {
+  nav{
+    padding: 1.5em;
+    height:5em;
+  }
 }

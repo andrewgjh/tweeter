@@ -4,11 +4,11 @@ const createTweetElement = function (data) {
   <header>
     <figure class="tweet-name">
     <img src="${data.user.avatars}" alt=""></i>${data.user.name}</figure>
-    <p class="tweet-handle">${data.user.handle}</p>
+    <a class="tweet-handle">${data.user.handle}</a>
     
   </header>
   <p class="tweet">${escapeText(data.content.text)}</p>
-  <footer>
+  <footer class="post-footer">
     <p class="tweet-timelapsed">${timeago.format(data.created_at)}</p>
     <figure>
       <a href="#"><i class="far fa-flag"></i></a>
