@@ -30,6 +30,7 @@ const renderTweets = function (dataArray) {
   });
 };
 
+// when document ready- load database of tweets and listen for submission of new tweets
 $(document).ready(() => {
   loadTweets();
   $("form").get(0).reset();
@@ -52,16 +53,18 @@ const loadTweets = () => {
 const onSubmit = function (event) {
   event.preventDefault();
   const content = $(event.target.text).val();
+
+  //validation for when post has not chars
   if (!content) {
     const error =$('#tweet-error');
     error.html("The post cannot be blank!") ;
     error.slideDown().delay(2000).slideUp(1000);
     return;
   }
-
+  //validation for when post exceeds 140 chars
   if (content.length > 140) {
     const error =$('#tweet-error');
-    error.html("You have exceeded the 140 character limit.") ;
+    error.html("Exceeded the 140 character limit!") ;
     error.slideDown().delay(2000).slideUp(1000);
     return;
   }
@@ -74,7 +77,7 @@ const onSubmit = function (event) {
   });
 }
 
-//escaping the text to prevent cross site scripting
+//function for escaping the text to prevent cross site scripting
 const escapeText = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));

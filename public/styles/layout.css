@@ -1,8 +1,4 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+/* global settings  */
 html {
   box-sizing: border-box;
 }
@@ -12,11 +8,6 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
-
 body {
   color: #545149;
   background-color: #F5EEDC;
@@ -24,17 +15,16 @@ body {
   margin-top: 0;
   font-family: 'Source Sans Pro', sans-serif
 }
-
 main {
   padding: .83em;
   width: 90%;
   margin: auto;
 }
 
+/* button to return to top  */
 #scroll-btn {
   display: none;
 }
-
 #scroll-btn-circle {
   position: fixed;
   bottom: 20px;
@@ -43,34 +33,30 @@ main {
   border: none;
   outline: none;
   background-color: #DD4A48;
-  color: white;
+  color: #FDFCE5;
   padding: 25px;
   border-radius: 5em;
   font-size: .83em;
 }
-
 .scroll-btn-arrow {
   position: fixed;
   z-index: 101;
-  color: white;
+  color: #FDFCE5;
   bottom: 33px;
   right: 46px;
 }
-
+/* media query for desktop */
 @media all and (min-width: 1024px) {
   body {
     display: flex;
   }
-
   main {
     margin-top: 5em;
   }
-
   #scroll-btn-circle {
     padding: 30px;
     font-size: 1em;
   }
-
   .scroll-btn-arrow {
     bottom: 38px;
     right: 51px;

@@ -55,8 +55,10 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
+    <!-- dynamic error-message -->
     <section id="tweet-error">
     </section>
+    <!-- compose new tweets - only visible when click for new tweets button -->
     <section class="new-tweet">
       <h3>Compose Tweet</h3>
       <form method="POST" action="/tweets" id="tweet-form">
@@ -68,15 +70,17 @@
         </div>
       </form>
     </section>
+    <!-- dynamically rendered tweets from database -->
     <section class="tweets-container">
     </section>
   </main>
-
+  <!-- btn that appears past the hero section of the page that brings you back to the top of page -->
   <aside id=scroll-btn>
     <button id="scroll-btn-circle">
     </button>
     <i class="scroll-btn-arrow fa-solid fa-arrow-up"></i>
   </aside>
+  
 </body>
 
 </html>

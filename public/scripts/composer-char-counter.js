@@ -1,3 +1,6 @@
+// event listener on form for the character count 
+// of the tweet with CSS styling overmax chars
+
 $(document).ready(function () {
   $("#tweet-text").on('input', function () {
     let remainingChar = 140 - $(this).val().length;
