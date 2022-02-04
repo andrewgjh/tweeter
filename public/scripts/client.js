@@ -1,3 +1,4 @@
+
 // Template post for new tweets
 const createTweetElement = function (data) {
   return $(`<article class="tweet-post">
@@ -35,10 +36,21 @@ $(document).ready(() => {
   loadTweets();
   $("form").get(0).reset();
   $(document).on("submit", onSubmit);
-  $("#toTweet").on('click', ()=>{
-    $('.new-tweet').slideDown();
-  })
+  $("#toTweet").on('click', onTweetClick);
 });
+
+//when clicked it will show/hide the compose tweet section;
+const onTweetClick = ()=>{
+  const compose = $('.new-tweet');
+  const isHidden = compose.css("display") === "none";
+  if (isHidden){
+    compose.slideDown();
+  }
+  else{
+    compose.slideUp();
+  }
+}
+
 
 //ajax request to get database of tweets and render thems
 const loadTweets = () => {
